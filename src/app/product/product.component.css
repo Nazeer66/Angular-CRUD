@@ -1,0 +1,21 @@
+.odd{
+    color:red;
+
+}
+.even{
+    color:green;
+}
+.btn {
+    margin-right:10px;
+}
+.table thead
+{
+    color:#fff;
+    font-weight: bold;
+}
+.rowClass{
+    background:gray;
+}
+.headBg{
+    background: #000;
+}

@@ -1,0 +1,32 @@
+
+  <div class="col-lg-7">
+    <h2>User Database</h2>
+      <table class="table table-bordered">
+          <thead class="headBg">
+            <tr>
+              <td>Index</td>
+              <td>Name</td>
+              <td>Age</td>
+              <td>Address</td>
+              <td>Action</td>
+            </tr>
+          </thead>
+          <tr *ngFor="let arr of data; let i = index ">
+            <td [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">{{i+1}}</td>
+            <!-- [class.rowClass]="data.indexOf(arr) % 2 == 0" -->
+            <td  [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">
+              {{arr.name}}
+            </td>
+            <td  [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">
+              {{arr.age}}
+            </td>
+            <td [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">
+              {{arr.address}}
+            </td>
+            <td [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">
+                <button class="btn btn-default" (click)="editData(i)">Edit</button>
+                <button class="btn btn-default" (click)="deleteData(arr)">Delete</button>
+            </td>
+          </tr>
+        </table>
+  </div>
