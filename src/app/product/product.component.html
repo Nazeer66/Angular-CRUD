@@ -1,5 +1,18 @@
 
   <div class="col-lg-7">
+      <div class="col-lg-12">
+          <h2>Search User</h2>
+          <div class="row">
+            <div class="col-lg-5">
+                <div class="form-group">
+                    <label for="usr">Name:</label>
+                    <input type="text" class="form-control" id="usr" [(ngModel)]="myData" name="firstName" ><br>
+                    <!-- <p *ngFor="let usr of myevent">{{usr.name}}</p> -->
+                </div>
+            </div>
+          </div>
+        </div>
+        
     <h2>User Database</h2>
       <table class="table table-bordered">
           <thead class="headBg">
@@ -11,22 +24,25 @@
               <td>Action</td>
             </tr>
           </thead>
-          <tr *ngFor="let arr of data; let i = index ">
+          <tr *ngFor="let arr of data | searchbar:myData: 'name' ; let i = index ">
             <td [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">{{i+1}}</td>
             <!-- [class.rowClass]="data.indexOf(arr) % 2 == 0" -->
             <td  [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">
-              {{arr.name}}
+              {{arr.name | uppercase}}
             </td>
             <td  [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">
               {{arr.age}}
             </td>
             <td [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">
-              {{arr.address}}
+              {{arr.address |titlecase}}
             </td>
             <td [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">
-                <button class="btn btn-default" (click)="editData(i)">Edit</button>
+                <button class="btn btn-default" (click)="editData(arr,i)">Edit</button>
                 <button class="btn btn-default" (click)="deleteData(arr)">Delete</button>
             </td>
           </tr>
         </table>
+        <!-- <ng-template #abc>
+          <p>No Record FOund</p>
+        </ng-template> -->
   </div>

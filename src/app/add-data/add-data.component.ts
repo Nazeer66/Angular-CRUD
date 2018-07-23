@@ -10,6 +10,7 @@ export class AddDataComponent implements OnInit {
   name:string;
   age:number;
   address:string;
+  
   constructor(public obj: myfirstService) { 
 
 
@@ -27,6 +28,10 @@ export class AddDataComponent implements OnInit {
       this.address="";
     }
   }
+  // editData(i){
+  //   console.log("i",i)
+  //   // this.name =
+  // }
 saveData(user){
 
 }

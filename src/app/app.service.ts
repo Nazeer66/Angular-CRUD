@@ -30,13 +30,12 @@ addNewData(name:string, age:number, address:string){
     this.myData.push({name, age, address});
 }
 
-editData(i){
+// editData(i){
 	
-	return this.myData[i];
-	 
-	
-  
-}
+// 	return this.myData[i].name
+// 	console.log(this.myData[i].name);
+
+// }
 
 deleteData(val){
     let user = this.myData.indexOf(val);

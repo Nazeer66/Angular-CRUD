@@ -18,15 +18,17 @@ index;
     this.data =  this.obj.myData;
     console.log(this.data)
     
-   }
+  }
    
 
-   editData(ip){
-   let user = ip;
-   this.obj.editData(user);
-  //  this.geteditData = this.obj.editData(eval);
-   console.log("Returning editData", this.obj.editData(eval));
-    // this.index = this.obj.myData;
+   editData(arr,ip){
+     console.log("arr",arr);
+    
+  //  let user = ip;
+  //  console.log("ip",ip);
+   
+  //  arr.name = this.obj.editData;
+  //  console.log("Returning editData", this.obj.editData(eval));
    }
    
     deleteData(index){
