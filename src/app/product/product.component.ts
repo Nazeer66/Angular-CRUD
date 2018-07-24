@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { myfirstService } from  '../app.service';
 
 @Component({
@@ -7,11 +7,14 @@ import { myfirstService } from  '../app.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
+@Input() getSearchData;
+  
+  myParentData = " I am Coming from parent component"
   // myArray= ['nazeer','karthi','dilip','arzath'];
   myArray= [1,2,3,4,5,6];
   data;
   geteditData;
+  getParentData;
 
 index;
   constructor(public obj: myfirstService) {
@@ -33,10 +36,15 @@ index;
       console.log("Delete Me", index);
       
       this.obj.deleteData(index);
-      
+    }
 
+    childComponentClick(event){
+       console.log("$event", event);
+      this.getParentData = event;
+      
     }
   ngOnInit() {
+    
   }
   
 }

@@ -19,3 +19,17 @@
 .headBg{
     background: #000;
 }
+
+
+.input-component{
+    background: #FF851B;
+    margin-top: 10px;
+    padding-left: 10%;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+ }
+ p{
+    font-weight: bold;
+   
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output , EventEmitter } from '@angular/core';
 import { myfirstService } from '../app.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { myfirstService } from '../app.service';
 })
 export class SearchUserComponent implements OnInit {
   myevent;
+  myData;
+  @Output() onbuttonclick = new EventEmitter();
   constructor(public obj: myfirstService) { }
 
 
@@ -18,6 +20,11 @@ export class SearchUserComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
+    
+  this.onbuttonclick.emit(this.myData);
 
+  }
+  sendData(date:any){
+    this.onbuttonclick.emit(this.myData);
+}
 }
