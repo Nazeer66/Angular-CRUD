@@ -13,11 +13,11 @@ export class SearchUserComponent implements OnInit {
   constructor(public obj: myfirstService) { }
 
 
-  onkeyUp(){
-    this.myevent = this.obj.myData;
-    console.log("myKeyup", this.myevent);
+  // onkeyUp(){
+  //   this.myevent = this.obj.myData;
+  //   console.log("myKeyup", this.myevent);
 
-  }
+  // }
 
   ngOnInit() {
     

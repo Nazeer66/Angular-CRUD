@@ -1,7 +1,6 @@
 
   <div class="col-lg-7">
-      
-    
+
     <h2>User Database</h2>
       <table class="table table-bordered">
           <thead class="headBg">
@@ -13,6 +12,7 @@
               <td>Action</td>
             </tr>
           </thead>
+
           <tr *ngFor="let arr of data | searchbar:getSearchData:'name'; let i = index ">
             <td [style.background]="data.indexOf(arr) % 2 == 0 ? 'green' : 'red'">{{i+1}}</td>
             <!-- [class.rowClass]="data.indexOf(arr) % 2 == 0" -->
