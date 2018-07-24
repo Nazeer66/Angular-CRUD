@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  searchbar;
+
+  onButtonClick(event){
+    console.log("$App",event);
+    this.searchbar = event;
+  }
 }

@@ -1,0 +1,13 @@
+ 
+ .input-component{
+    background: #000;
+    margin-top: 10px;
+    padding-left: 10%;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+ }
+ p{
+     font-weight: bold;
+    
+ }

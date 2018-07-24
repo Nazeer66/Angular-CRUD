@@ -8,7 +8,9 @@ import { HeaderComponentComponent } from './header-component/header-component.co
 import { ProductComponent } from './product/product.component';
 import { AddDataComponent } from './add-data/add-data.component';
 import { SearchUserComponent } from './search-user/search-user.component';
-import { SearchbarPipe } from './product/searchbar.pipe';
+
+import { ComponentInteractComponent } from './product/component-interact/component-interact.component';
+import { SearchbarPipe } from './product/search-pipes.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { SearchbarPipe } from './product/searchbar.pipe';
     ProductComponent,
     AddDataComponent,
     SearchUserComponent,
+    ComponentInteractComponent,
     SearchbarPipe
   ],
   imports: [

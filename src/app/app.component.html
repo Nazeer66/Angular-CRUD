@@ -3,8 +3,11 @@
 <div class="container">
     <div class="row bg-primary">
             <app-add-data></app-add-data>
-            <app-product></app-product>
-            <app-search-user></app-search-user>
-    </div>
+            <app-search-user (onbuttonclick)="onButtonClick($event)"></app-search-user>
+            <app-product [getSearchData]="searchbar"></app-product> 
+            
+            <!-- <p>From Child search-bar: {{searchbar}}</p> -->
+        
+        </div>
 </div>
 
